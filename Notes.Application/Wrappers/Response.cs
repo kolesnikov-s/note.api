@@ -1,4 +1,4 @@
-﻿namespace Notes.Web.Wrappers
+﻿namespace Notes.Application.Wrappers
 {
     public class Response<T>
     {

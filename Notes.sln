@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Domain", "Notes.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Database.PostgreSQL", "Notes.Database.PostgreSQL\Notes.Database.PostgreSQL.csproj", "{A7E50DA6-02CD-4612-9462-059B12B3C9B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.UseCases", "Notes.UseCases\Notes.UseCases.csproj", "{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Application", "Notes.Application\Notes.Application.csproj", "{4A899498-B0E2-4A89-802A-1D87E432BDA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A7E50DA6-02CD-4612-9462-059B12B3C9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7E50DA6-02CD-4612-9462-059B12B3C9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7E50DA6-02CD-4612-9462-059B12B3C9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Linq;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Notes.Web.Controllers
 {
     [Route("")]
-    [Authorize]
+    // [Authorize]
     [ApiController]
     public class BaseApiController: ControllerBase
     {
+        private IMediator _mediator;
+        protected IMediator Mediator => _mediator ??= HttpContext.RequestServices.GetService<IMediator>();
 
+        
         /// <summary>
         /// Получить идентификатор текущего пользователя.
         /// </summary>

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Notes.Database.PostgreSQL\Notes.Database.PostgreSQL.csproj" />
+    <ProjectReference Include="..\Notes.UseCases\Notes.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

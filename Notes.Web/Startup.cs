@@ -15,8 +15,11 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Notes.Application.Interfaces;
 using Notes.Database.PostgreSQL;
+using Notes.UseCases;
 using Notes.Web.Options;
+using Notes.Web.Services;
 
 namespace Notes.Web
 {
@@ -32,8 +35,16 @@ namespace Notes.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllers();
             services.AddInfrastructurePostgresSql(Configuration);
+ 
+            services.AddUseCases();
+
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddHttpContextAccessor();
+
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Notes Api", Version = "v1"});

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Notes.Application.Interfaces;
 
 namespace Notes.Database.PostgreSQL
 {
@@ -11,11 +12,14 @@ namespace Notes.Database.PostgreSQL
         {
             var connectionString = configuration.GetConnectionString("Default");
             
-            services.AddDbContext<NotesDbContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     configuration.GetConnectionString("Default") 
                     // ,x => x.MigrationsAssembly("RandomYou.Database")
                 ));
+            
+            services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+
         }
     }
 }
