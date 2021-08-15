@@ -9,18 +9,18 @@ namespace Notes.Controllers
 {
     public class AccountController : BaseApiController
     {
-        /// <summary>
-        /// Получить идентификатор текущего пользователя.
-        /// </summary>
-        /// <returns></returns>
-        [Authorize]
-        [HttpGet, Route("account")]
-        public async Task<IActionResult> Authentication()
-        {
-            var response = await Mediator.Send(new GetCurrentUserIdQuery());
-            
-            return Ok(response);
-        }
+        // /// <summary>
+        // /// Получить идентификатор текущего пользователя.
+        // /// </summary>
+        // /// <returns></returns>
+        // [Authorize]
+        // [HttpGet, Route("account")]
+        // public async Task<IActionResult> Authentication()
+        // {
+        //     var response = await Mediator.Send(new GetCurrentUserIdQuery());
+        //     
+        //     return Ok(response);
+        // }
         
         /// <summary>
         /// Отправить СМС с кодом подтверждения на телефон.
