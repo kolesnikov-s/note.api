@@ -4,8 +4,7 @@ using Notes.Application.Wrappers;
 
 namespace Notes.UseCases.Notes.Queries.GetNotesByUser
 {
-    public class GetNotesByUserIdQuery: IRequest<Response<IEnumerable<GetNotesByUserIdViewModel>>>
+    public class GetNotesByUserQuery: IRequest<Response<IEnumerable<GetNotesByUserViewModel>>>
     {
-        // public Guid UserId { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Notes.UseCases.Notes.Queries.GetNotesByUser
+namespace Notes.UseCases.Notes.Queries.GetNotesPageByUser
 {
-    public class GetNotesByUserViewModel
+    public class GetNotesPageByUserViewModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

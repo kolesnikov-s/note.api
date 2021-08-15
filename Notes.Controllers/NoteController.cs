@@ -6,7 +6,7 @@ using Notes.UseCases.Notes.Commands.CreateNote;
 using Notes.UseCases.Notes.Commands.DeleteNoteById;
 using Notes.UseCases.Notes.Commands.UpdateNote;
 using Notes.UseCases.Notes.Queries.GetNoteById;
-using Notes.UseCases.Notes.Queries.GetNotesByUser;
+using Notes.UseCases.Notes.Queries.GetNotesPageByUser;
 
 namespace Notes.Controllers
 {
@@ -17,9 +17,14 @@ namespace Notes.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet, Route("notes")]
-        public async Task<IActionResult> GetNotes()
+        public async Task<IActionResult> GetNotes(string searchWords = null, int? pageNumber = null, int? pageSize = null)
         {
-            var response = await Mediator.Send(new GetNotesByUserIdQuery());
+            var response = await Mediator.Send(new GetNotesPageByUserQuery()
+            {
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                SearchWords = searchWords
+            });
             
             return Ok(response);
         }
@@ -31,10 +36,7 @@ namespace Notes.Controllers
         [HttpGet, Route("notes/{id}")]
         public async Task<IActionResult> GetNote(Guid id)
         {
-            var response = await Mediator.Send(new GetNoteByIdQuery()
-            {
-                NoteId = id
-            });
+            var response = await Mediator.Send(new GetNoteByIdQuery() { NoteId = id });
             
             return Ok(response);
         }
