@@ -2,9 +2,9 @@
 using Notes.Application.Interfaces;
 using Notes.Domain;
 
-namespace Notes.Database.PostgreSQL
+namespace Notes.Infrastructure.DbContext
 {
-    public class ApplicationDbContext: DbContext, IApplicationDbContext
+    public class ApplicationDbContext: Microsoft.EntityFrameworkCore.DbContext, IApplicationDbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Note> Notes { get; set; }

@@ -7,11 +7,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.Web", "Notes.Web\Note
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Domain", "Notes.Domain\Notes.Domain.csproj", "{F68E892E-73AF-41F7-BA12-96D51998EDB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Database.PostgreSQL", "Notes.Database.PostgreSQL\Notes.Database.PostgreSQL.csproj", "{A7E50DA6-02CD-4612-9462-059B12B3C9B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Infrastructure", "Notes.Infrastructure\Notes.Infrastructure.csproj", "{A7E50DA6-02CD-4612-9462-059B12B3C9B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.UseCases", "Notes.UseCases\Notes.UseCases.csproj", "{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Application", "Notes.Application\Notes.Application.csproj", "{4A899498-B0E2-4A89-802A-1D87E432BDA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Controllers", "Notes.Controllers\Notes.Controllers.csproj", "{91F2D8E8-88AF-440D-BC6E-6B07019458B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Frameworks", "4. Frameworks", "{42F1B5B3-140F-4865-BAEF-3EF3E408888B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Entities", "1. Entities", "{B1876465-18FB-4351-B25D-A26EDE8CC2CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Use Cases", "2. Use Cases", "{C8BE8C4B-A49B-439A-A4C3-4074EF2D162B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Controllers", "3. Controllers", "{B09FA027-F214-4523-A193-978A939A2A79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,11 +49,23 @@ Global
 		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A899498-B0E2-4A89-802A-1D87E432BDA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F2D8E8-88AF-440D-BC6E-6B07019458B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F2D8E8-88AF-440D-BC6E-6B07019458B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F2D8E8-88AF-440D-BC6E-6B07019458B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F2D8E8-88AF-440D-BC6E-6B07019458B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44B534D7-90D1-46F6-BD0C-88E30D020667}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7E50DA6-02CD-4612-9462-059B12B3C9B1} = {42F1B5B3-140F-4865-BAEF-3EF3E408888B}
+		{CE9725CE-75DF-4C98-86E1-744FB1CC4F74} = {42F1B5B3-140F-4865-BAEF-3EF3E408888B}
+		{F68E892E-73AF-41F7-BA12-96D51998EDB1} = {B1876465-18FB-4351-B25D-A26EDE8CC2CE}
+		{C7CDAE7B-A3F6-4096-9A75-36E12CB69AD0} = {C8BE8C4B-A49B-439A-A4C3-4074EF2D162B}
+		{4A899498-B0E2-4A89-802A-1D87E432BDA9} = {C8BE8C4B-A49B-439A-A4C3-4074EF2D162B}
+		{91F2D8E8-88AF-440D-BC6E-6B07019458B3} = {B09FA027-F214-4523-A193-978A939A2A79}
 	EndGlobalSection
 EndGlobal

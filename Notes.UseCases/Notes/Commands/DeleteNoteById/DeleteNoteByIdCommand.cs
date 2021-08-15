@@ -6,6 +6,6 @@ namespace Notes.UseCases.Notes.Commands.DeleteNoteById
 {
     public class DeleteNoteByIdCommand: IRequest<Response<Guid>>
     {
-        
+        public Guid Id { get; set; }
     }
 }
