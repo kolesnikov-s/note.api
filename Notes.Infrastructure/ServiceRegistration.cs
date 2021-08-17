@@ -19,7 +19,6 @@ namespace Notes.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(
                     configuration.GetConnectionString("Default") 
-                    // ,x => x.MigrationsAssembly("Notes.Infrastructure.DbContext??")
                 ));
             
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
